@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct LoginView: View {
-    @State var root = ""
+    @State var root = Requests.localRoot
     @State var username = ""
     @State var password = ""
     
@@ -28,6 +28,7 @@ struct LoginView: View {
                 .foregroundColor(.accentColor)
             TextField("username", text:  $username)
                 .autocorrectionDisabled(true)
+                .autocapitalization(.none)
               
             Text("password")
                 .foregroundColor(.accentColor)
